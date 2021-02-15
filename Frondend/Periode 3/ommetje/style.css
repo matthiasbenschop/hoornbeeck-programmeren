@@ -1,0 +1,124 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    background-color: #F3F2ED ;
+}
+
+
+.lefttop {
+    position: relative;
+    float: left;
+    font-size: 300%;
+}
+
+.xp {
+    position: relative;
+    float: right;
+    top: 30px;
+    font-size: 200%;  
+}
+
+.righttop {
+    position: relative;
+    float: right;
+    font-size: 300%;
+    color: purple;
+}
+
+.imgb {
+    z-index: -1;
+    position: relative;
+    top: -130px;
+    height: 1000px;
+}
+
+.hersen {
+    z-index: -1;
+    position: absolute;
+    top: 410px;
+    left: 250px;
+    height: 400px;
+}
+
+.inverted {
+    background-color: #F3F2ED;
+    position: absolute;
+    top: 740px;
+    width: 1550px;
+    height: 900px;
+    border-radius: 50%;
+    left: -490px;
+  }
+
+  .o {
+      position: absolute;
+      top: 800px;
+      left: 90px;
+      color: purple;
+      font-size: 500%;
+  }
+
+  .tijd {
+    position: absolute;
+    top: 850px;
+    left: 150px;
+    font-size: 300%;
+  }
+
+  .min {
+    position: absolute;
+    top: 880px;
+    left: 250px;
+  }
+
+  .button {
+      position: absolute;
+      top: 1000px;
+      left: 300px;
+      background-color: purple;
+      border-radius: 50px;
+      color: white;
+  }
+
+  .teams1 {
+    position: absolute;
+    top: 1150px;
+    left: 230px;
+    color: purple;
+  }
+
+  .XP {
+    position: absolute;
+    top: 1160px;
+    left: 600px; 
+    font-size: 150%;
+    text-decoration: underline;
+  }
+
+  .T { 
+    position: absolute;
+    top: 1220px;
+    left: 230px;
+    font-size: 170%;
+  }
+
+  .bekijk {
+    position: absolute;
+    top: 1250px;
+    left: 230px;
+    color: purple;
+    font-size: 170%;  
+  }
+
+  .team {
+    position: absolute;
+    top: 1350px;
+    left: 400px; 
+    font-size: 150%;
+    text-decoration: underline;
+  }
+
+  .bg-div {
+
+  }
+
