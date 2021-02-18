@@ -1,3 +1,5 @@
+<h1>Cursussen</h1>
+
 <?php
 
 if (isset($_GET["ingelogd"])){
@@ -18,6 +20,7 @@ if (isset($_GET["ingelogd"])){
         <title>Inschrijven</title>
     </head>
     <body>
+
     <form method="post" action="">
     
             <input type="text" name="naam" placeholder="Hoe heet je?">

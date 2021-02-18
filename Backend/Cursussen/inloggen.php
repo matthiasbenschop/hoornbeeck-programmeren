@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Inloggen</h1>
+
     <a href="index.php">Home</a>
     <a href="inloggen.php">Inloggen</a><br>
 
@@ -18,6 +19,7 @@
         <input type="password" placeholder="Typ hier je wachtwoord" name="password"><br><br>
         <input type="submit" name="submit" value="Login">
     </form>
+    
 
 
     <?php
