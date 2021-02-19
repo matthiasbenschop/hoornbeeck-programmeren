@@ -1,29 +1,27 @@
+<?php include 'header.php'; ?>
+
+
 <h1>Cursussen</h1>
 
 <?php
 
-if (isset($_GET["ingelogd"])){
+if (isset($_SESSION["ingelogd"])){
 
     print '<a href="index.php">Home</a>
-            <a href="index.php">Uitloggen</a><br>';
+            <a href="uitloggen.php">Uitloggen</a><br>';
             
 
 } else {
     header('Location: inloggen.php');
 }
 ?>
-<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Inschrijven</title>
-    </head>
-    <body>
+
+
+    <p>Welkom <?php echo $_SESSION ['ingelogd'];?> 
 
     <form method="post" action="">
     
-            <input type="text" name="naam" placeholder="Hoe heet je?">
+            <input type="text" name="naam" placeholder="Naam">
     
             <p></p>
     
@@ -63,9 +61,10 @@ if (isset($_GET["ingelogd"])){
     
     if ($_POST) {
         if($_POST['naam']) {
-            echo "Beste ".$_POST['naam'].", je hebt je ingeschreven voor een hele vreemde cursus";
+            echo "Beste ".$_POST['naam'].", je hebt je ingeschreven voor de cursus!";
+    
         } else {
-            echo "Iemand heeft zich ingeschreven voor een hele vreemde cursus";
+            echo "Iemand heeft zich ingeschreven voor een cursus!";
         }
     }
     
