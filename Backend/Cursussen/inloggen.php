@@ -18,7 +18,7 @@
     <?php
         if($_POST) {
 
-            $ingelogd = 'false';
+            $ingelogd = false;
             
 
             $USERS = [
@@ -29,22 +29,18 @@
 
                 foreach ($USERS as $USER) { 
                     if ($USER['username'] == $_POST['username'] && $USER['password'] == $_POST['password']) {
-                            $ingelogd = 'true';
+                            $ingelogd = true;
                             $_SESSION['ingelogd'] = $USER['username'];
                             header('Location: index.php');
   
                    
                     }
                 }
-                if ($ingelogd == 'false') {
-                    echo 'ERRRRRRROOOOOOOOOOOOOOOOOOOOORRRRRR';
+                if (!$ingelogd) {
+                    echo 'Gebruikersnaam of wachtwoord is onjuist';
                 }
 
                 }
-
-           
-
-        
 
 
     ?>
