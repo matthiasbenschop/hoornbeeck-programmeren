@@ -1,23 +1,19 @@
 <?php include 'header.php'; ?>
 
+<?php
+        if (!(isset($_SESSION['ingelogd']))){
+        header('Location: inloggen.php');
+    }
+       ?>
 
-<h1>Cursussen</h1>
+
 
 <?php
+    if (isset($_SESSION['ingelogd'])) {
+        echo 'Welkom ' .$_SESSION['ingelogd'];
+    }
 
-if (isset($_SESSION["ingelogd"])){
-
-    print '<a href="index.php">Home</a>
-            <a href="uitloggen.php">Uitloggen</a><br>';
-            
-
-} else {
-    header('Location: inloggen.php');
-}
 ?>
-
-
-    <p>Welkom <?php echo $_SESSION ['ingelogd'];?> 
 
     <form method="post" action="">
     
@@ -25,38 +21,40 @@ if (isset($_SESSION["ingelogd"])){
     
             <p></p>
     
-            <table border="1" cellspacing="0" cellpadding="5">
+            <table class="table table-hover table-sm w-auto m-2">
+                <thead>
                 <tr>
-                    <td>Cursus</td>
-                    <td>Omschrijving</td>
-                    <td>Prijs</td>
-                    <td>&nbsp;</td>
+                    <th>Cursus</th>
+                    <th>Omschrijving</th>
+                    <th>Prijs</th>
+                    <th>&nbsp;</th>
                 </tr>
+                </thead>
+                <tbody>
+
+                
     
                 <?php
     
-                $items = [
-                    ['cursus' => 'Dreamwaver', 'omschrijving' => 'Basis webdesign', 'prijs' => '190'],
-                    ['cursus' => 'Javascript', 'omschrijving' => 'Programmeren in de browser', 'prijs' => '390'],
-                    ['cursus' => 'PHP', 'omschrijving' => 'Programmeren op de server', 'prijs' => '155'],
-                    ['cursus' => 'Dreamwaver Eindwerk', 'omschrijving' => 'Webdesign in de praktijk', 'prijs' => '182'],
-                    ['cursus' => 'Dreamwaver', 'omschrijving' => 'Webdesign thuis', 'prijs' => '285']
-                ];
-    
-    
-    foreach ($items as $item) {
-        echo "
-        <tr>
-            <td>".$item['cursus']."</td>
-            <td>".$item['omschrijving']."</td>
-            <td>€".$item['prijs']."</td>
-            <td>
+            $conn = mysqli_connect('localhost','root','','trainingen');
+            $sql = "SELECT * FROM cursussen";
+            $result = mysqli_query($conn, $sql);
+
+            while ($row = mysqli_fetch_assoc($result)){
+                echo "
+                <tr>
+                  <td>".$row['cursus']."</td>
+                  <td>".$row['omschrijving']."</td>
+                  <td>€".$row['prijs']."</td>
+                  <td>
                 <input type='submit' value='Inschrijven'>
             </td>
         </tr>";
-    }
+            }
     
-    echo "</table>
+    
+    
+    echo "</tbody></table>
     </form>";
     
     if ($_POST) {

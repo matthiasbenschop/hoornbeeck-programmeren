@@ -1,47 +1,55 @@
 <?php include 'header.php'; ?>
 
-    <h1>Inloggen</h1>
+    
 
-    <a href="index.php">Home</a>
-    <a href="inloggen.php">Inloggen</a><br>
+   
 
-    <br><form method="POST">
-        <p>Gebruikersnaam:</p>
-        <input type="text" placeholder="Typ hier je gebruikersnaam" name="username"><br><br>
-        <p>Wachtwoord:</p>
-        <input type="password" placeholder="Typ hier je wachtwoord" name="password"><br><br>
-        <input type="submit" name="submit" value="Login">
-    </form>
+    
+    <div class="container login-container text-center d-flex justify-content-center">
+                <div class="w-50 login-form mt-5">
+                    <h3>Inloggen</h3>
+                    <form method='post'>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Gebruikersnaam" name="username" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Wachtwoord" name="password" value="" />
+                        </div><br>
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" value="Login" />
+                        </div>
+                    </form>
+                </div>
+
     
 
 
     <?php
-        if($_POST) {
 
-            $ingelogd = false;
-            
 
-            $USERS = [
-                ['username' => 'admin', 'password' => 'admin'],
-                ['username' => 'matthias', 'password' => 'matthias'],
-                ['username' => 'jan', 'password' => 'jan']
-            ];
+$conn = mysqli_connect('localhost','root','','trainingen');
+$sql = "SELECT * FROM users";
+$result = mysqli_query($conn, $sql);
 
-                foreach ($USERS as $USER) { 
-                    if ($USER['username'] == $_POST['username'] && $USER['password'] == $_POST['password']) {
-                            $ingelogd = true;
-                            $_SESSION['ingelogd'] = $USER['username'];
-                            header('Location: index.php');
-  
-                   
-                    }
-                }
-                if (!$ingelogd) {
-                    echo 'Gebruikersnaam of wachtwoord is onjuist';
-                }
+if ($_POST){
+$username = FALSE;
+while ($row = mysqli_fetch_assoc($result)) {
+    if ($row['username'] == $_POST['username']) {
+        $username = TRUE;
+        if ($row['password'] == $_POST['password']){
+            $_SESSION['ingelogd'] = $row['username'];
+            header('Location: index.php');
+        } else {
+            echo 'wachtwoord is onjuist';
+        }
+    } 
 
-                }
+} 
+if ($username == FALSE){
+    echo 'gebruikersnaam niet gevonden';
+}
 
+}
 
     ?>
 </body>
