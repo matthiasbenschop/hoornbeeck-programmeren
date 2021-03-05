@@ -32,8 +32,12 @@ if (isset($_SESSION['ingelogd'])){
                             <a class="nav-link" href="add.php">Cursussen toevoegen</a>
                         </li>
                         <li class="nav-item">
+                        <a class="nav-link" href="register.php">Registreren</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="uitloggen.php">Uitloggen</a>
-                        </li>'; }
+                        </li>'
+                        ; }
                         
                         ?>
                 
