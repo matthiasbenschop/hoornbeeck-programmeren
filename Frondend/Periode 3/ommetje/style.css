@@ -379,6 +379,27 @@ body {
   background-color: purple;
 }
 
+.button2 {
+  background-color: orange;
+  position: absolute;
+  top: 420px;
+  left: 240px;
+}
+
+.button3 {
+  background-color: purple;
+  position: absolute;
+  top: 120px;
+  left: 180px;
+}
+
+.button4 {
+  background-color: orange;
+  position: absolute;
+  top: 220px;
+  left: 180px;
+}
+
 .but {
   border: none;
   color: white;
@@ -394,6 +415,21 @@ body {
   top: 500px;
   border-radius: 50%;
   background-color: purple;
+}
+
+.stopbtn {
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10%;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: absolute;
+  left: 162px;
+  top: 520px;
 }
 
 .material-icons {
@@ -430,6 +466,260 @@ body {
 }
 
 
+
+
+
+
+
+
+/* footer */
+
+.footer {
+  position: absolute;
+  top: 2700px;
+  background-color: purple;
+  width: 100%;
+  height: 340px;
+  color: #F3F2ED;
+  font-size: 200%;
+  text-indent: 0px;
+}
+
+
+
+
+
+
+
+
+
+/* popup medailles */
+
+.ontop {
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  position: absolute;				
+  background-color: white;
+  color: black;
+  border-radius: 100px;
+}
+
+#popup {
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  color: #000000;
+  background-color: #ffffff;
+  top: 50%;
+  left: 50%;
+}
+
+.hide {
+  position: absolute;
+  top: 1300px;
+  left: 350px;
+  font-size: 250%;
+  color: purple;
+}
+
+/* hiker popup */
+.puhiker {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 110px;
+  left: 55px;
+}
+
+.teksthikerh {
+  font-size: 300%;
+  position: absolute;
+  left: 50px;
+  top: 20px;
+}
+
+.teksthikerp {
+  font-size: 200%;
+  position: absolute;
+  left: 50px;
+  top: 100px;
+}
+
+.hiker1 {
+  position: absolute;
+  left: 50px;
+  top: 300px;
+  width: 150px;
+}
+.hiker2 {
+  position: absolute;
+  left: 500px;
+  top: 300px;
+  width: 150px;
+}
+.hiker3 {
+  position: absolute;
+  left: 280px;
+  top: 300px;
+  width: 150px;
+}
+.hiker4 {
+  position: absolute;
+  left: 50px;
+  top: 550px;
+  width: 150px;
+}
+.hiker5 {
+  position: absolute;
+  left: 280px;
+  top: 550px;
+  width: 150px;
+}
+.hiker6 {
+  position: absolute;
+  left: 500px;
+  top: 550px;
+  width: 150px;
+}
+.hiker7 {
+  position: absolute;
+  left: 50px;
+  top: 800px;
+  width: 150px;
+}
+.hiker8 {
+  position: absolute;
+  left: 280px;
+  top: 800px;
+  width: 150px;
+}
+.hiker9 {
+  position: absolute;
+  left: 500px;
+  top: 800px;
+  width: 150px;
+}
+
+.teksthiker4{
+  font-size: 200%;
+  position: absolute;
+  left: 100px;
+  top: 230px;
+}
+.teksthikerbrons {
+  font-size: 200%;
+  position: absolute;
+  left: 80px;
+  top: 420px;
+}
+
+.teksthiker15 {
+  font-size: 200%;
+  position: absolute;
+  left: 325px;
+  top: 230px;
+}
+.teksthikerzilver {
+  font-size: 200%;
+  position: absolute;
+  left: 315px;
+  top: 420px;
+}
+
+.teksthiker35 {
+  font-size: 200%;
+  position: absolute;
+  left: 550px;
+  top: 230px;
+}
+.teksthikergoud {
+  font-size: 200%;
+  position: absolute;
+  left: 540px;
+  top: 420px;
+}
+
+.teksthiker55 {
+  font-size: 200%;
+  position: absolute;
+  left: 95px;
+  top: 480px;
+}
+.teksthikerrobijn {
+  font-size: 200%;
+  position: absolute;
+  left: 80px;
+  top: 670px;
+}
+
+.teksthiker75 {
+  font-size: 200%;
+  position: absolute;
+  left: 325px;
+  top: 480px;
+}
+.teksthikersaffier {
+  font-size: 200%;
+  position: absolute;
+  left: 310px;
+  top: 670px;
+}
+
+.teksthiker100 {
+  font-size: 200%;
+  position: absolute;
+  left: 540px;
+  top: 480px;
+}
+.teksthikerdiamant {
+  font-size: 200%;
+  position: absolute;
+  left: 520px;
+  top: 670px;
+}
+
+.teksthiker200 {
+  font-size: 200%;
+  position: absolute;
+  left: 90px;
+  top: 730px;
+}
+.teksthikersmaragd {
+  font-size: 200%;
+  position: absolute;
+  left: 70px;
+  top: 910px;
+}
+
+.teksthiker300 {
+  font-size: 200%;
+  position: absolute;
+  left: 320px;
+  top: 730px;
+}
+.teksthikeramethist {
+  font-size: 200%;
+  position: absolute;
+  left: 300px;
+  top: 910px;
+}
+
+.teksthiker400 {
+  font-size: 200%;
+  position: absolute;
+  left: 540px;
+  top: 730px;
+}
+.teksthikerparelmoer {
+  font-size: 200%;
+  position: absolute;
+  left: 510px;
+  top: 910px;
+}
 
 
 

@@ -7,6 +7,23 @@
    
     <meta charset="UTF-8">
     <title>Ommetje</title>
+
+
+    <script type="text/javascript">
+        function pop(div) {
+            document.getElementById(div).style.display = 'block';
+        }
+        function hide(div) {
+            document.getElementById(div).style.display = 'none';
+        }
+        //To detect escape button
+        document.onkeydown = function(evt) {
+            evt = evt || window.event;
+            if (evt.keyCode == 27) {
+                hide('popDiv');
+            }
+        };
+    </script>
 </head>
 <body>
 
@@ -22,7 +39,7 @@
 <h1 class="tijd">/20</h1>
 <h1 class="min">min</h1>
 
-    <a href="start.html"><button class="button button1">Start Ommetje</button></a>
+    <a href="start.html"><button onclick="startOmmetje()" class="button button1">Start Ommetje</button></a>
 
 
 <div id="ranglijst">
@@ -58,6 +75,10 @@
 
 
 
+<!-- popup -->
+
+<a href="#" onClick="pop('popDiv')"><img src="m1.png" class="puhiker"></a>
+
 
 
 
@@ -80,23 +101,62 @@ $('.image-link').magnificPopup({type:'image'});
 <div id="doneren">
     <h1 class="doneer">Doneren</h1>
     <p class="dtext">De Hersenstichting is afhankelijk<br> van particuliere giften. Dankzij<br> jouw bijdrage kunnen we meer<br> hersenonderzoek doen.</p>
-    <div class="buttond">
-        <h1>&nbsp &nbsp &nbsp &nbsp Doneren &nbsp &nbsp &nbsp &nbsp</h1>
-    </div>
+    <a href="#"><button class="button button2">Doneren</button></a>
 </div>
 
 <div id="stats">
     <h1 class="texts">Stats</h1>
-    <div class="buttons">
-        <h1>&nbsp &nbsp &nbsp &nbsp Bekijk Statistieken &nbsp &nbsp &nbsp &nbsp</h1>
-    </div>
-    <div class="buttono">
-        <h1>&nbsp &nbsp &nbsp &nbsp Bekijk je Ommetjes &nbsp &nbsp &nbsp &nbsp</h1>
-    </div>
+    <a href="#"><button class="button button3">Bekijk Statistieken</button></a>
+    <a href="#"><button class="button button4">Bekijk je Ommetjes</button></a>
 </div>
 
 
 
 
+<footer class="footer">
+    <a>Account instellingen</a><br>
+    <a>Over Ommetjes</a><br>
+    <a>Veelgestelde vragen</a><br>
+    <a>Uitloggen</a><br>
+    <a>Privacy statement</a><br><br>
+    <a>Terms & Conditions</a><br>
+    <a>App versie: 3.0.5</a>
+  </footer>
+
+
+  <div id="startommetje"></div>
+
+  <div id="popDiv" class="ontop">
+
+    <div class="puhiker1">
+        <h1 class="teksthikerh">De Hiker Medaille</h1>
+        <p class="teksthikerp">Loop dagelijks minimaal 20 minuten. Je krijgt<br>
+        hier per dag 5 XP punten voor. Voor je tweede<br>
+        Ommetje van de dag krijg je 1 extra punt.</p>
+        <img src="m1.png" class="hiker1"><p class="teksthiker4">4x<p class="teksthikerbrons">brons</p>
+        <img src="m1.png" class="hiker2"><p class="teksthiker15">15x<p class="teksthikerzilver">zilver</p>
+        <img src="m1.png" class="hiker3"><p class="teksthiker35">35x<p class="teksthikergoud">goud</p>
+        <img src="m1.png" class="hiker4"><p class="teksthiker55">55x<p class="teksthikerrobijn">robijn</p>
+        <img src="m1.png" class="hiker5"><p class="teksthiker75">75x<p class="teksthikersaffier">saffier</p>
+        <img src="m1.png" class="hiker6"><p class="teksthiker100">100x<p class="teksthikerdiamant">diamant</p>
+        <img src="m1.png" class="hiker7"><p class="teksthiker200">200x<p class="teksthikersmaragd">smaragd</p>
+        <img src="m1.png" class="hiker8"><p class="teksthiker300">300x<p class="teksthikeramethist">amethist</p>
+        <img src="m1.png" class="hiker9"><p class="teksthiker400">400x<p class="teksthikerparelmoer">parelmoer</p>
+
+
+    </div>    
+<a href="#" class="hide" onClick="hide('popDiv')">Sluiten</a>
+
+
+    
+
+
+
+
+
+
+
+
+  
 </body>
 </html>
