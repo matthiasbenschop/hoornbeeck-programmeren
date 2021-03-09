@@ -31,13 +31,22 @@ if (isset($_SESSION['ingelogd'])){
                         <li class="nav-item">
                             <a class="nav-link" href="add.php">Cursussen toevoegen</a>
                         </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="register.php">Registreren</a>
-                        </li>
+ 
                         <li class="nav-item">
                             <a class="nav-link" href="uitloggen.php">Uitloggen</a>
                         </li>'
-                        ; }
+                        ; }else{
+                            echo '<nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <div class="container-fluid">
+                                <div class="collapse navbar-collapse" id="navbarText">
+                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                            <a class="nav-link" href="register.php">Registreren</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="inloggen.php">Inloggen</a>
+                        </li>';
+                        }
                         
                         ?>
                 

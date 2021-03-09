@@ -722,5 +722,63 @@ body {
 }
 
 
+/* popup reeks medaille */
 
+
+    
+
+/* .hidden {​​​​​​​​
+display: none;
+}​​​​​​​​
+
+.popup {​​​​​​​​
+z-index: 500;
+position: fixed;
+left: 10%;
+background-color: white;
+padding: 30px;
+box-sizing: border-box;
+width: 75%;
+height: 60%;
+top: 20%;
+}​​​​​​​​ */
+
+
+#full {
+    height: 319px;
+    width: 360px;
+    position: absolute;
+    background-color: #00FF00;
+    -webkit-animation: background 2400s cubic-bezier(1,0,0,1);
+    animation: background 2400s cubic-bezier(1,0,0,1);
+    z-index: -2;
+    top: 0px;
+}
+
+
+@-webkit-keyframes background {
+  0% { background-color: #ffab00; height: 0px; top: 318px;}
+  11% { background-color: #f2b400; height: 33px; top: 286px;} 
+  22% { background-color: #e4bd00; height: 67px; top: 252px;} 
+  33% { background-color: #d3c600; height: 100px; top: 219px;}
+  44% { background-color: #bfce00; height: 133px; top: 186px;} 
+  55% { background-color: #a8d600; height: 167px; top: 152px;}
+  67% { background-color: #8bde00; height: 200px; top: 119px;}
+  78% { background-color: #7be100; height: 233px; top: 86px;} 
+  89% { background-color: #4de805; height: 267px; top: 52px;} 
+  100% { background-color: #1beb12; height: 300px; top: 19px;}
+  }
+
+  @keyframes background {
+  0% { background-color: #ffab00; height: 0px; top: 318px;}
+  11% { background-color: #f2b400; height: 33px; top: 286px;} 
+  22% { background-color: #e4bd00; height: 67px; top: 252px;} 
+  33% { background-color: #d3c600; height: 100px; top: 219px;}
+  44% { background-color: #bfce00; height: 133px; top: 186px;} 
+  55% { background-color: #a8d600; height: 167px; top: 152px;}
+  67% { background-color: #8bde00; height: 200px; top: 119px;}
+  78% { background-color: #7be100; height: 233px; top: 86px;} 
+  89% { background-color: #4de805; height: 267px; top: 52px;} 
+  100% { background-color: #1beb12; height: 300px; top: 19px;}
+  }
 
