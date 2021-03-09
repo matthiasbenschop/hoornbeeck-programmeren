@@ -49,6 +49,9 @@
                   <td>€".$row['prijs']."</td>
                   <td>
                 <input type='submit' value='Inschrijven'>
+                <button><a href='bewerken.php?id=".$row['id']."'>Bewerken</a> |
+                <a onclick='return confirmSubmit()' href='delete.php?id=".$row['id']."'>Verwijderen</a></button>
+                
             </td>
         </tr>";
             }
@@ -69,7 +72,20 @@
     
     
     ?>
-            
+
+
+         <script>
+
+        function confirmSubmit(){
+            var agree=confirm("Weet je zeker dat je hem wilt verwijderen?");
+            if (agree){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+         </script>   
     
     </body>
     </html>
