@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="style.css" rel="stylesheet">
+    <link href="medailles.css" rel="stylesheet">
+    <link href="start.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Ommetje</title>
+</head>
+<body>
+
+<img src="image/ranglijst.jpeg" class="rgl">
+<img src="image/ranglijst1.jpeg" class="rgl1">
+<a href="index.html"><img src="image/pijl.png" class="pijl"></a>
+
+                                                                    <!-- popup -->
+
+
+                  <div id="popup7" class="overlay6">
+                    <div class="popup7">
+                        <div class="content">
+                            <a class="close7" href="#">&times;</a>
+                            <a href="#" onclick="show()"><img class="imghiker1" src="image/popupprofile.jpeg" >&times;</a>
+        
+                        </div>
+                    </div>
+                </div>
+        
+        
+                <div class="medaillespopup1">
+                    <a class="medaille7" onclick="hide()" id="hide" href="#popup7">
+                        <img src="image/matthiasb.png" class="m7popup"></a>
+
+                    </div>
+
+                    <script>
+                        function hide(){
+                            document.getElementById("hide").innerHTML = "";
+
+                        }
+                        function show(){
+                            document.getElementById("hide").innerHTML = ' <img src="image/matthiasb.png" class="m7popup"></a>';
+                        }
+                    </script>
+</body>
+</html>    

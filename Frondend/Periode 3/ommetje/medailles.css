@@ -1,0 +1,706 @@
+                                                    /* tekst onder medailles */
+  
+  .hiker {
+    position: absolute;
+    top: 430px;
+    left: 120px;
+    font-size: 160%;
+  }
+  .hikerh {
+    position: absolute;
+    top: 390px;
+    left: 170px;
+    font-size: 180%;
+  }
+  .reeks {
+    position: absolute;
+    top: 430px;
+    left: 450px;
+    font-size: 160%;
+  }
+  .reeksh {
+    position: absolute;
+    top: 390px;
+    left: 500px;
+    font-size: 180%;
+  }
+  .hart {
+    position: absolute;
+    top: 860px;
+    left: 140px;
+    font-size: 160%;
+  }
+  .harth {
+    position: absolute;
+    top: 830px;
+    left: 160px;
+    font-size: 160%;
+  }
+  .vroeg {
+    position: absolute;
+    top: 860px;
+    left: 450px;
+    font-size: 160%;
+  }
+  .vroegh {
+    position: absolute;
+    top: 830px;
+    left: 460px;
+    font-size: 160%;
+  }
+  .actief {
+    position: absolute;
+    top: 1270px;
+    left: 120px;
+    font-size: 160%;
+  }
+  .actiefh {
+    position: absolute;
+    top: 1230px;
+    left: 150px;
+    font-size: 160%;
+  }
+  .weetjes {
+    position: absolute;
+    top: 1270px;
+    left: 460px;
+    font-size: 160%;
+  }
+  .weetjesh {
+    position: absolute;
+    top: 1230px;
+    left: 480px;
+    font-size: 160%;
+  }
+  
+                                                                    /* medailles */
+  
+  .img {
+    position: absolute;
+    top: 120px;
+    left: 50px;
+    height: 300px;
+    width: 300px;
+  }
+  
+  .img1{
+    position: absolute;
+    top: 110px;
+    left: 400px;
+    height: 300px;
+    width: 300px;
+  }
+  .img2 {
+    position: absolute;
+    top: 550px;
+    left: 50px;
+    height: 300px;
+    width: 300px;
+  }
+  .img3 {
+    position: absolute;
+    top: 550px;
+    left: 400px;
+    height: 300px;
+    width: 300px;
+  }
+  .img4 {
+    position: absolute;
+    top: 950px;
+    left: 50px;
+    height: 300px;
+    width: 300px;
+  }
+  .img5 {
+    position: absolute;
+    top: 950px;
+    left: 400px;
+    height: 300px;
+    width: 300px;
+  }
+
+  
+                                                                /* hiker popup */
+  /* .puhiker {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 110px;
+    left: 55px;
+  }
+  
+  .teksthikerh {
+    font-size: 300%;
+    position: absolute;
+    left: 50px;
+    top: 20px;
+  }
+  
+  .teksthikerp {
+    font-size: 200%;
+    position: absolute;
+    left: 50px;
+    top: 100px;
+  }
+  
+  .hiker1 {
+    position: absolute;
+    left: 50px;
+    top: 300px;
+    width: 150px;
+  }
+  .hiker2 {
+    position: absolute;
+    left: 500px;
+    top: 300px;
+    width: 150px;
+  }
+  .hiker3 {
+    position: absolute;
+    left: 280px;
+    top: 300px;
+    width: 150px;
+  }
+  .hiker4 {
+    position: absolute;
+    left: 50px;
+    top: 550px;
+    width: 150px;
+  }
+  .hiker5 {
+    position: absolute;
+    left: 280px;
+    top: 550px;
+    width: 150px;
+  }
+  .hiker6 {
+    position: absolute;
+    left: 500px;
+    top: 550px;
+    width: 150px;
+  }
+  .hiker7 {
+    position: absolute;
+    left: 50px;
+    top: 800px;
+    width: 150px;
+  }
+  .hiker8 {
+    position: absolute;
+    left: 280px;
+    top: 800px;
+    width: 150px;
+  }
+  .hiker9 {
+    position: absolute;
+    left: 500px;
+    top: 800px;
+    width: 150px;
+  }
+  
+  .teksthiker4{
+    font-size: 200%;
+    position: absolute;
+    left: 100px;
+    top: 230px;
+  }
+  .teksthikerbrons {
+    font-size: 200%;
+    position: absolute;
+    left: 80px;
+    top: 420px;
+  }
+  
+  .teksthiker15 {
+    font-size: 200%;
+    position: absolute;
+    left: 325px;
+    top: 230px;
+  }
+  .teksthikerzilver {
+    font-size: 200%;
+    position: absolute;
+    left: 315px;
+    top: 420px;
+  }
+  
+  .teksthiker35 {
+    font-size: 200%;
+    position: absolute;
+    left: 550px;
+    top: 230px;
+  }
+  .teksthikergoud {
+    font-size: 200%;
+    position: absolute;
+    left: 540px;
+    top: 420px;
+  }
+  
+  .teksthiker55 {
+    font-size: 200%;
+    position: absolute;
+    left: 95px;
+    top: 480px;
+  }
+  .teksthikerrobijn {
+    font-size: 200%;
+    position: absolute;
+    left: 80px;
+    top: 670px;
+  }
+  
+  .teksthiker75 {
+    font-size: 200%;
+    position: absolute;
+    left: 325px;
+    top: 480px;
+  }
+  .teksthikersaffier {
+    font-size: 200%;
+    position: absolute;
+    left: 310px;
+    top: 670px;
+  }
+  
+  .teksthiker100 {
+    font-size: 200%;
+    position: absolute;
+    left: 540px;
+    top: 480px;
+  }
+  .teksthikerdiamant {
+    font-size: 200%;
+    position: absolute;
+    left: 520px;
+    top: 670px;
+  }
+  
+  .teksthiker200 {
+    font-size: 200%;
+    position: absolute;
+    left: 90px;
+    top: 730px;
+  }
+  .teksthikersmaragd {
+    font-size: 200%;
+    position: absolute;
+    left: 70px;
+    top: 910px;
+  }
+  
+  .teksthiker300 {
+    font-size: 200%;
+    position: absolute;
+    left: 320px;
+    top: 730px;
+  }
+  .teksthikeramethist {
+    font-size: 200%;
+    position: absolute;
+    left: 300px;
+    top: 910px;
+  }
+  
+  .teksthiker400 {
+    font-size: 200%;
+    position: absolute;
+    left: 540px;
+    top: 730px;
+  }
+  .teksthikerparelmoer {
+    font-size: 200%;
+    position: absolute;
+    left: 510px;
+    top: 910px;
+  }
+
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+   */
+
+                                                                    /* popup hiker */
+   .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 50px auto;
+    padding: 20px;
+    background: transparent;
+    border-radius: 40px;
+    width: 900px;
+    margin-left: 10%;
+    height: 6000px;
+    position: relative;
+    transition: all;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 200px;
+    transition: all 200ms;
+    font-size: 30000px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.imghiker {
+    width: 800px;
+    transition: all 200ms;
+    text-decoration: none;
+    position: absolute;
+    left: -10px;
+}
+.m1popup {
+    z-index: -1;
+    width: 300px;
+    position: absolute;
+    top: 130px;
+    left: 50px;
+}
+                                                                /* popup reeks */
+   .overlay1 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay1:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup1 {
+    margin: 50px auto;
+    padding: 20px;
+    background: transparent;
+    border-radius: 40px;
+    width: 900px;
+    margin-left: 10%;
+    height: 6000px;
+    position: relative;
+    transition: all;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup1 .close {
+    position: absolute;
+    top: 20px;
+    right: 200px;
+    transition: all 200ms;
+    font-size: 30000px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+ .imghiker1 {
+    width: 800px;
+    transition: all 200ms;
+    text-decoration: none;
+    position: absolute;
+    left: -10px;
+}
+.m2popup {
+    z-index: -1;
+    width: 300px;
+    position: absolute;
+    top: 120px;
+    left: 400px;
+}
+
+                                                                    /* popup hart */
+
+.overlay2 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay2:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup1 {
+    margin: 50px auto;
+    padding: 20px;
+    background: transparent;
+    border-radius: 40px;
+    width: 900px;
+    margin-left: 10%;
+    height: 6000px;
+    position: relative;
+    transition: all;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup1 .close {
+    position: absolute;
+    top: 20px;
+    right: 200px;
+    transition: all 200ms;
+    font-size: 30000px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+ .imghiker1 {
+    width: 800px;
+    transition: all 200ms;
+    text-decoration: none;
+    position: absolute;
+    left: -10px;
+}
+.m3popup {
+    z-index: -1;
+    width: 300px;
+    position: absolute;
+    top: 550px;
+    left: 50px;
+}
+
+                                                                 /* popup vroege vogel */
+
+   .overlay3 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay3:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup4 {
+    margin: 50px auto;
+    padding: 20px;
+    background: transparent;
+    border-radius: 40px;
+    width: 900px;
+    margin-left: 10%;
+    height: 6000px;
+    position: relative;
+    transition: all;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup4 .close {
+    position: absolute;
+    top: 20px;
+    right: 200px;
+    transition: all 200ms;
+    font-size: 30000px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+ .imghiker1 {
+    width: 800px;
+    transition: all 200ms;
+    text-decoration: none;
+    position: absolute;
+    left: -10px;
+}
+.m4popup {
+    z-index: -1;
+    width: 300px;
+    position: absolute;
+    top: 550px;
+    left: 400px;
+}
+
+
+                                                                /* popup blijf actief */
+
+    .overlay4 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay4:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup5 {
+    margin: 50px auto;
+    padding: 20px;
+    background: transparent;
+    border-radius: 40px;
+    width: 900px;
+    margin-left: 10%;
+    height: 6000px;
+    position: relative;
+    transition: all;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup5 .close {
+    position: absolute;
+    top: 20px;
+    right: 200px;
+    transition: all 200ms;
+    font-size: 30000px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+ .imghiker1 {
+    width: 800px;
+    transition: all 200ms;
+    text-decoration: none;
+    position: absolute;
+    left: -10px;
+}
+.m5popup {
+    z-index: -1;
+    width: 300px;
+    position: absolute;
+    top: 940px;
+    left: 50px;
+}
+
+                                                            /* popup weetjes */
+
+   .overlay5 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay5:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup6 {
+    margin: 50px auto;
+    padding: 20px;
+    background: transparent;
+    border-radius: 40px;
+    width: 900px;
+    margin-left: 10%;
+    height: 6000px;
+    position: relative;
+    transition: all;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup6 .close {
+    position: absolute;
+    top: 20px;
+    right: 200px;
+    transition: all 200ms;
+    font-size: 30000px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+ .imghiker1 {
+    width: 800px;
+    transition: all 200ms;
+    text-decoration: none;
+    position: absolute;
+    left: -10px;
+}
+.m6popup {
+    z-index: -1;
+    width: 300px;
+    position: absolute;
+    top: 940px;
+    left: 400px;
+}
+
