@@ -1,19 +1,33 @@
 <?php include 'header.php'; ?>
-<form method="post">
-<div class="form-group">
-  <label for="cursus">Cursus</label>
-  <input type="text" class="form-control" id="usr" name="cursus" required>
-</div>
-<div class="form-group">
-  <label for="omschrijving">Omschrijving</label>
-  <input type="text" class="form-control" id="pwd" name="omschrijving" required>
-</div>
-<div class="form-group">
-  <label for="prijs">Prijs</label>
-  <input type="text" class="form-control" id="pwd" name="prijs" required>
-</div><br>
-<input type='submit' value='Toevoegen'>
-</form>
+
+<style>
+    html, body {
+    background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+</style>   
+
+
+<div class="container login-container text-center d-flex justify-content-center">
+                <div class="w-50 login-form mt-5">
+                    <h3 class="register">Cursus toevoegen</h3>
+                    <form method='post'>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Cursus" name="cursus" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Omschrijving" name="omschrijving" value="" />
+                        </div>
+                        <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Prijs" name="prijs" value="" />
+                        </div><br>
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" value="Toevoegen" />
+                        </div>
+                    </form>
+                </div>
 
 <?php
 

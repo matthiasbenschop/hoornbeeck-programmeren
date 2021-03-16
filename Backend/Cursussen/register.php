@@ -1,9 +1,18 @@
 <?php include 'header.php'; ?>
 
 
+<style>
+    html, body {
+    background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+</style> 
+
 <div class="container login-container text-center d-flex justify-content-center">
                 <div class="w-50 login-form mt-5">
-                    <h3>Registreren</h3>
+                    <h3 class="register">Registreren</h3>
                     <form method='post'>
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Volledige naam" name="username1" value="" required/>

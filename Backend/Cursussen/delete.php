@@ -9,12 +9,12 @@
     $sql = "DELETE FROM cursussen where id='$id'";
     
     if (mysqli_query($conn, $sql)) {
-        echo "Bewerkt!";
+        header('Location: index.php');
     } else {
         echo "Error: " . $sql . ":-" . mysqli_error($conn);
     }
     mysqli_close($conn);
-    header('Location: index.php');
+    
     
     } else {
         echo 'geen rechten';

@@ -1,24 +1,36 @@
 <?php include 'header.php'; ?>
 
+<style>
+    html, body {
+    background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+</style>   
+
 <?php
 
 $id = $_GET['id'];
 
 echo '<form method="post">
-<div class="form-group">
-  <label for="cursus">Cursus</label>
-  <input type="text" class="form-control" id="usr" name="cursus" required>
-</div>
-<div class="form-group">
-  <label for="omschrijving">Omschrijving</label>
-  <input type="text" class="form-control" id="pwd" name="omschrijving" required>
-</div>
-<div class="form-group">
-  <label for="prijs">Prijs</label>
-  <input type="text" class="form-control" id="pwd" name="prijs" required>
-</div><br>
-<input type="submit" value="Bewerken" name="edit">
-</form>';
+<div class="container login-container text-center d-flex justify-content-center">
+                <div class="w-50 login-form mt-5">
+                    <h3 class="register">Cursus Bewerken</h3>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Nieuwe Cursusnaam" name="cursus" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Omschrijving" name="omschrijving" value="" />
+                        </div>
+                        <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Nieuwe Prijs" name="prijs" value="" />
+                        </div><br>
+                        <div class="form-group">
+                            <input type="submit" name="edit" class="btnSubmit" value="Bewerken" />
+                        </div>
+                    </form>
+                </div>';
 ?>
 <?php
     if (isset($_POST['edit'])){

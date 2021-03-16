@@ -13,15 +13,18 @@
         echo 'Welkom ' .$_SESSION['ingelogd'];
     }
 
+    if (isset($_GET['cursus'])) {
+        $cursusname = $_GET['cursus'];
+    }
+
 ?>
 
     <form method="post" action="">
     
-            <input type="text" name="naam" placeholder="Naam">
     
             <p></p>
     
-            <table class="table table-hover table-sm w-auto m-2">
+            <table class="table table-hover table-center w-auto">
                 <thead>
                 <tr>
                     <th>Cursus</th>
@@ -31,6 +34,7 @@
                 </tr>
                 </thead>
                 <tbody>
+                
 
                 
 
@@ -42,14 +46,16 @@
             $result = mysqli_query($conn, $sql);
 
             while ($row = mysqli_fetch_assoc($result)){
+                $cursus = $row['cursus'];
                 echo "
                 <tr>
                   <td>".$row['cursus']."</td>
                   <td>".$row['omschrijving']."</td>
                   <td>€".$row['prijs']."</td>
                   <td>
-                <input type='submit' value='Inschrijven'>
-                <button><a href='bewerken.php?id=".$row['id']."'>Bewerken</a> |
+                  
+                <button><a href='index.php?cursus=".$row['cursus']."'<input type='submit'>Inschrijven</a> |
+                <a href='bewerken.php?id=".$row['id']."'>Bewerken</a> |
                 <a onclick='return confirmSubmit()' href='delete.php?id=".$row['id']."'>Verwijderen</a></button>
                 
             </td>
@@ -60,15 +66,12 @@
     
     echo "</tbody></table>
     </form>";
-    
-    if ($_POST) {
-        if($_POST['naam']) {
-            echo "Beste ".$_POST['naam'].", je hebt je ingeschreven voor de cursus!";
-    
-        } else {
-            echo "Iemand heeft zich ingeschreven voor een cursus!";
-        }
-    }
+
+    if (isset($cursusname)){
+            
+            echo "Beste ".$_SESSION['ingelogd'].", Je hebt je ingeschreven voor de cursus ". $cursusname."";
+            }
+        
     
     
     ?>
