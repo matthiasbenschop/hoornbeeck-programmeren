@@ -12,7 +12,7 @@
 
 <div class="container login-container text-center d-flex justify-content-center">
                 <div class="w-50 login-form mt-5">
-                    <h3 class="register">Cursus toevoegen</h3>
+                    <h3 class="register">Cursus toevoegen</h3><br>
                     <form method='post'>
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Cursus" name="cursus" value="" />

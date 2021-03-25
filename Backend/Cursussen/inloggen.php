@@ -13,7 +13,7 @@
 
 
 
-<div class="container">
+<div class="container1	">
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
@@ -64,7 +64,8 @@ while ($row = mysqli_fetch_assoc($result)) {
     if ($row['username'] == $_POST['username']) {
         $username = TRUE;
         if ($row['password'] == $_POST['password']){
-            $_SESSION['ingelogd'] = $row['username'];
+            $_SESSION['ingelogd']['naam'] = $row['username'];
+            $_SESSION['ingelogd']['id'] = $row['id'];
             header('Location: index.php');
         } else {
             echo 'wachtwoord is onjuist';

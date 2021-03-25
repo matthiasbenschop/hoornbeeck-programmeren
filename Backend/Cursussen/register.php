@@ -6,31 +6,36 @@
     background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
+    height: 0%;
 }
 </style> 
 
-<div class="container login-container text-center d-flex justify-content-center">
-                <div class="w-50 login-form mt-5">
-                    <h3 class="register">Registreren</h3>
-                    <form method='post'>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Volledige naam" name="username1" value="" required/>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Gebruikersnaam" name="username" value="" required/>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Wachtwoord" name="password" value="" required/>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Herhaal wachtwoord" name="password1" value="" required/>
-                        </div><br>
-                        <div class="form-group">
-                            <input type="submit" class="btnSubmit" value="Registreren" />
-                        </div>
-                    </form>
-                </div>
+<div class="container">
+  <div class="row">
+  <form method="post" class="col-xs-12 col-sm-12 col-md-12">
+  <h2 class="register1">Registreren</h2>
+  <div class="form-group">
+      <input type="text" class="form-control" id="name" name="username1" placeholder="Volledige naam" required>
+    </div>
+	
+	<div class="form-group">
+      <input type="text" class="form-control" id="surname" name="username" placeholder="Gebruikersnaam" required>
+    </div>
+	
+	<div class="form-group">
+      <input type="password" class="form-control" id="pwd" name="password" placeholder="Wachtwoord" required>
+   </div>
+   <div class="form-group">
+      <input type="password" class="form-control" id="pwd" name="password1" placeholder="Herhaal wachtwoord"  required>
+   </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"> <span>Remember me</span></label>
+    </div>
+    <button type="submit" class="btn btn-warning">Registreren</button>
+    <p class="inloggen">Heb je al een account? <a href="inloggen.php">Login</a>
+  </form>
+  </div>
+</div>
 
 
 
