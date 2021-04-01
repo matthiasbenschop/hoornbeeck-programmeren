@@ -56,7 +56,7 @@ for(var i =0;i<operator.length;i++){
 					printOutput(result);
 					printHistory("");
 				}
-				else{
+				else{ 
 					history=history+this.id;
 					printHistory(history);
 					printOutput("");
