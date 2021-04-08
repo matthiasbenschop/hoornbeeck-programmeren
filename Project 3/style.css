@@ -88,16 +88,17 @@ body {
     margin-top: -200px;
     z-index: 1;
   }
-  
+/* zoekbalk */
   input[type=text]:focus {
-    width: 80%;
+    width: 100%;
   }
+
 
 /* Homepage */
 
 .imghome {
-  height: 500px;
-  width: 750px;
+  height: 400px;
+  width: 650px;
 }
 
 
@@ -211,14 +212,33 @@ a:hover {
 /* scrollbar */
 
 div.ex1 {
+  position: relative;
   background-color: whitesmoke;
-  width: 500px;
-  height: 600px;
+  width: 800px;
+  height: 500px;
   overflow: scroll;
-  margin-left: 130px;
-  font-size: 30px;
+  margin-left: 120px;
+  font-size: 20px;
   text-align: left;
 }
+
+/* table */
+.item {
+  margin-top: 15px;
+  border-bottom: 2px solid #696969;
+  display: grid;
+  grid-template-columns: 17% 17% 17% 17% 17% 17%;
+}
+
+
+.item_header {
+  width: 800px;
+  border-bottom: 2px solid #696969;
+  display: grid;
+  grid-template-columns: 17% 17% 17% 17% 17% 17%;
+}
+
+
 
 
 /* bonnetje */
@@ -464,7 +484,7 @@ body {
   background: #C5E1A5;
 }
 form {
-  width: 60%;
+  width: 100%;
   margin: 60px auto;
   background: #efefef;
   padding: 60px 120px 80px 120px;
@@ -543,3 +563,6 @@ button:hover {
 .radio {
   margin-top: -500px;
 }
+
+
+

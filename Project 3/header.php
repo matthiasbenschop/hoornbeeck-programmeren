@@ -30,7 +30,7 @@ if ($_SESSION['user']['admin']=='ja'){
              <li class="nav-item active">
                  <a class="nav-link" href="voorraad.php">Voorraad</a>
              </li>
-             <li class="nav-item active">
+             <li class="nav-item">
                  <a class="nav-link" href="beveiliging.php">Beveiliging</a>
              </li>
              <li class="nav-item">
@@ -55,9 +55,6 @@ if ($_SESSION['user']['admin']=='ja'){
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="kassa.php">Kassa</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="voorraad.php">Voorraad</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="uitloggen.php">Uitloggen</a>
