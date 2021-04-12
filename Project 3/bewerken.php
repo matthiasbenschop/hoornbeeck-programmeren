@@ -8,11 +8,12 @@ $id = $_GET['product'];
 
 <form class="box" method="POST">
   <h1>Bewerken</h1>
-  <input type="text" name="product" placeholder="Productnaam">
-  <input type="text" name="code" placeholder="Ean Code">
+  <input type="text" name="name" placeholder="Productnaam">
+  <input type="text" name="product_id" placeholder="Ean Code">
   <input type="text" name="price" placeholder="Prijs">
-  <input type="text" name="aantal" placeholder="Aantal">
-  <input type="text" name="cat" placeholder="Categorie">
+  <input type="text" name="stock" placeholder="Aantal">
+  <input type="text" name="group_id" placeholder="Categorie">
+  <input type="text" name="supplier" placeholder="Leverancier">
   <input type="submit" name="" value="Bewerken">
 </form>
 
@@ -20,20 +21,18 @@ $id = $_GET['product'];
 
 
 <?php
-    if ($_SERVER['REQUEST_METHOD']==='POST'){
-      $conn = mysqli_connect('localhost','root','','dekruidenier');
+  if ($_POST){
+    $conn = mysqli_connect('localhost','root','','dekruidenier');
 
-      $product = $_POST['product'];
-      $code = $_POST['code'];
-      $price = $_POST['price'];
-      $aantal = $_POST['aantal'];
-      $cat = $_POST['cat'];
+    $arr = ['name', 'product_id', 'price', 'stock', 'group_id', 'supplier'];
 
-      $sql = "UPDATE producten SET naam='$product', product_id='$code', prijs='$price', aantal='$aantal', cat='$cat' WHERE id=$id";
-
-      mysqli_query($conn, $sql); 
-
-      header ('Location: voorraad.php');
-
+    foreach($arr as $a) {
+      if(isset($_POST[$a])&&!empty($_POST[$a])) {
+        $new = $_POST[$a];
+        $sql = "UPDATE articles SET $a='$new' WHERE id=$id";
+        mysqli_query($conn, $sql);
+      }
     }
+    header ('Location: voorraad.php');
+  }
 ?>

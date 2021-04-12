@@ -27,7 +27,7 @@ if ($_SESSION['user']['admin']=='ja'){
              <li class="nav-item active">
                  <a class="nav-link" href="kassa.php">Kassa</a>
              </li>
-             <li class="nav-item active">
+             <li class="nav-item ">
                  <a class="nav-link" href="voorraad.php">Voorraad</a>
              </li>
              <li class="nav-item">
@@ -40,6 +40,7 @@ if ($_SESSION['user']['admin']=='ja'){
                  <a class="nav-link" href="uitloggen.php">Uitloggen</a>
              </li>
          </ul>
+        
  
      </div>
  </div>'; }
@@ -66,12 +67,16 @@ if ($_SESSION['user']['admin']=='ja'){
 
 
  ?>
-<script>
+<!-- <script>
+
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            document.body.classlist.toggle("dark-theme");
+        }
 
 
-
-
-    </script>
+    </script> -->
 </body>
 </html>
 

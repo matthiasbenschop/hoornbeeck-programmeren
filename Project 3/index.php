@@ -35,7 +35,7 @@ $conn = mysqli_connect('localhost','root','','dekruidenier');
 if ($_POST){
 $username = $_POST['username'];
 $password = $_POST['password'];
-$sql = "SELECT*FROM LOGIN WHERE username='$username' AND password='$password'";
+$sql = "SELECT*FROM users WHERE username='$username' AND password='$password'";
 $results = mysqli_query($conn, $sql);
 $data = mysqli_fetch_assoc($results);
 $row = mysqli_fetch_array($results, MYSQLI_ASSOC);
@@ -49,4 +49,5 @@ $count = mysqli_num_rows($results);
 
 </body>
 </html>
+
 

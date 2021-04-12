@@ -1,12 +1,12 @@
 <?php include ('header.php')?>
 
-<form><br>
+<form class="form"><br>
   <input onkeyup="myFunction()" id="zoeken" type="text" name="search" placeholder="Zoeken...">
 </form>
 
 
 
-<h3><br>Kassasysteem</h3>
+<h3><br>Kassasysteem</h3><br>
 
 <div class="ex1" id="kassa">
     <div class="item_header" style="background-color: darkgreen;">
@@ -16,77 +16,38 @@
         <p style="font-weight: bolder; margin-top: 15px; color: whitesmoke;">Aantal</p>
         <p style="font-weight: bolder; margin-top: 15px; color: whitesmoke;">Categorie</p>
         <p style="font-weight: bolder; margin-top: 15px; color: whitesmoke;">Toevoegen</p>
+        <a href="bon.php"><img src="winkel.png" class="winkel" alt="Winkelmandje"></a>
     </div>
+<form method="POST">
+
+
     <?php 
     
     $conn = mysqli_connect('localhost','root','','dekruidenier');
-    $sql = "SELECT * FROM producten";
+    $sql = "SELECT articles.*,`group`.`name` AS group_name FROM articles left join `group` on articles.group_id = `group`.id";
     $result = mysqli_query($conn, $sql);
     
     while ($row = mysqli_fetch_assoc($result)){ 
         echo "
         <div class='item'>
-            <p>".$row['naam']."</p>
+            <p>".$row['name']."</p>
             <p>".$row['product_id']."</p>
-            <p>€".$row['prijs']."</p>
-            <p>".$row['aantal']."x</p>
-            <p>".$row['cat']."</p>
-            <p><button>Toevoegen</button></p>
+            <p>€".$row['price']."</p>
+            <p>".$row['stock']."x</p>
+            <p>".$row['group_name']."</p>
+            <form method='post'>
+            <p><button class='addbutton' type='submit' name='items' value='".$row['name']."?".$row['product_id']."?".$row['price']."?".$row['stock']."?".$row['group_name']."?".$row['id']."'>Toevoegen</button></p></form>
         </div>";
     }
+        if(isset($_POST['items'])&&$_POST['items']) {
+            $_SESSION['items'][] = $_POST['items'];
+        }
     ?> 
+</form>
 </div>
 <br>
 
-<table class="body-wrap">
-    <tbody><tr>
-        <td></td>
-        <td class="container" width="600">
-            <div class="content">
-                <table class="main" width="100%" cellpadding="0" cellspacing="0">
-                    <tbody><tr>
-                        <td class="content-wrap aligncenter">
-                            <table width="100%" cellpadding="0" cellspacing="0">
-                                <tbody><tr>
-                                    <td class="content-block">
-                                        <h3>Bedankt voor de Boodschap</h3>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="content-block">
-                                        <table class="invoice">
-                                            <tbody><tr>
-                                                <td><br>#12345<br>April 07, 2021</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <table class="invoice-items" cellpadding="0" cellspacing="0">
-                                                        <tbody><tr>
-                                                            <td>Service 1</td>
-                                                            <td class="alignright">€ 20.00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Service 2</td>
-                                                            <td class="alignright">€ 10.00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Service 3</td>
-                                                            <td class="alignright">€ 6.00</td>
-                                                        </tr>
-                                                        <tr class="total">
-                                                            <td class="alignright" width="80%">Totaal</td>
-                                                            <td class="alignright">€ 36.00</td>
-                                                        </tr>
-                                                    </tbody></table>
-                                                </td>
-                                            </tr>
-                                        </tbody></table>
-                                    </td>
-                                </tr>
-                                    <td class="content-block">
-                                       Geholpen door:
-                                    </td>
-                                </tr>
+
 
 
 <script>

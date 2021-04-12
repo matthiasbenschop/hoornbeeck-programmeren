@@ -1,15 +1,15 @@
 <?php include ('header.php')?>
 
-<form><br>
+<form class="form"><br>
   <input onkeyup="myFunction()" id="zoeken" type="text" name="search" placeholder="Zoeken...">
 </form>
 
 
 
+<br>
+<a href="add.php" witdh><button class="addbutton">Toevoegen</button></a>
 
-
-
-<h3><br>Voorraadsysteem</h3>
+<h3><br>Voorraadsysteem</h3><br>
 
 <div class="ex1" id="kassa">
     <div class="item_header" style="background-color: darkgreen;">
@@ -18,23 +18,27 @@
         <p style="font-weight: bolder; margin-top: 15px; color: whitesmoke;">Prijs</p>
         <p style="font-weight: bolder; margin-top: 15px; color: whitesmoke;">Aantal</p>
         <p style="font-weight: bolder; margin-top: 15px; color: whitesmoke;">Categorie</p>
+        <p style="font-weight: bolder; margin-top: 15px; color: whitesmoke;">Leverancier</p>
+        <p style="font-weight: bolder; margin-top: 15px; color: whitesmoke;">Bewerken</p>
     </div>
     <?php 
     
     $conn = mysqli_connect('localhost','root','','dekruidenier');
-    $sql = "SELECT * FROM producten";
+    $sql = "SELECT articles.*,`group`.`name` AS group_name FROM articles left join `group` on articles.group_id = `group`.id";
     $result = mysqli_query($conn, $sql);
     
     while ($row = mysqli_fetch_assoc($result)){ 
         echo "
         <div class='item'>
-            <p>".$row['naam']."</p>
+            <p>".$row['name']."</p>
             <p>".$row['product_id']."</p>
-            <p>€".$row['prijs']."</p>
-            <p>".$row['aantal']."x</p>
-            <p>".$row['cat']."</p>
+            <p>€".$row['price']."</p>
+            <p>".$row['stock']."x</p>
+            <p>".$row['group_name']."</p>
+            <p>".$row['supplier']."</p>
            <button><a href='bewerken.php?product=". $row['id'] ."'>Bewerken</a></button>
         </div>";
+        
     }
 
 

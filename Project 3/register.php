@@ -1,50 +1,16 @@
 <?php include ('header.php')?>
 
-<form method="post">
-  <label>
-    <p class="label-txt">Volledige naam</p>
-    <input name="naam_voluit" type="text" class="input">
-    <div class="line-box">
-      <div class="line"></div>
-    </div>
-  </label>
-  <label>
-    <p class="label-txt">Gebruikersnaam</p>
-    <input name="username" type="text" class="input">
-    <div class="line-box">
-      <div class="line"></div>
-    </div>
-  </label>
-  <label>
-    <p class="label-txt">Wachtwoord</p>
-    <input name="password" type="password" class="input">
-    <div class="line-box">
-      <div class="line"></div>
-    </div>
-  </label>
 
-  
-  <label for="male">Beheerdersrechten &nbsp &nbsp &nbsp</label><input class="radio" type="radio" id="male" name="beheer" value="male">
-
-  <button type="submit">Registreren</button>
+  <form class="box" method="post">
+  <h1>Registreren</h1>
+  <input type="text" name="naam_voluit" placeholder="Volledige naam">
+  <input type="text" name="username" placeholder="Gebruikersnaam">
+  <input type="password" name="password" placeholder="Wachtwoord">
+  <input type="radio" id="male" name="beheer" value="male"> <label for="male" class="radio" >&nbspBeheerdersrechten</label></input>
+  <input type="submit" name="" value="Registreren">
 </form>
 
-<script>
-$(document).ready(function(){
 
-$('.input').focus(function(){
-  $(this).parent().find(".label-txt").addClass('label-active');
-});
-
-$(".input").focusout(function(){
-  if ($(this).val() == '') {
-    $(this).parent().find(".label-txt").removeClass('label-active');
-  };
-});
-
-});
-
-</script>
  <?php
 
 if ($_POST) {
@@ -57,12 +23,12 @@ if ($_POST) {
     $username = $_POST['username'];
     $password = $_POST['password'];
  
-    $sql = "INSERT INTO login(naam,username,password,admin)
+    $sql = "INSERT INTO users(name,username,password,admin)
     VALUES ('$naam_voluit','$username','$password','nee')";
 
     if ($password) {
         if (isset($_POST['beheer'])){
-        $sql = "INSERT INTO login(naam,username,password,admin)
+        $sql = "INSERT INTO users(name,username,password,admin)
         VALUES ('$naam_voluit','$username','$password','ja')";
         }
 
