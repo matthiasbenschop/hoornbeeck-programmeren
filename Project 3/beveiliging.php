@@ -1,10 +1,10 @@
-<?php include ('header.php')?>
+<?php include ('header.php');?>
 
 <h1 class="beveiliging">Hier vind u de meldingen van de beveiliging</h1>
 
 <?php
 
-$json_url = "https://martenbiesheuvel.nl/hoornbeeckhelden/security_log.json";
+$json_url = "http://martenbiesheuvel.nl/hoornbeeckhelden/security_log.json";
 $json = file_get_contents($json_url);
 $data = json_decode($json, TRUE);
 

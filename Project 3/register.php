@@ -16,7 +16,7 @@
 if ($_POST) {
     $conn = mysqli_connect('localhost','root','','dekruidenier');
     if(!$conn){
-        echo('Kan geen contact met de server maken!:' .mysql_error());
+        echo('Kan geen contact met de server maken!:' .mysqli_error());
     }
 
     $naam_voluit = $_POST['naam_voluit'];
