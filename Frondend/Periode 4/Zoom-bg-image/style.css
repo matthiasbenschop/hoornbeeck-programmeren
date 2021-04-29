@@ -1,0 +1,107 @@
+.zoom{
+    width: 30%;
+    height: 400px;
+    background-image: url(code.jpeg);
+    transition: .3s;
+    margin: 20px;
+    margin-top: 15%;
+    background-position: center; 
+}
+.zoom1{
+    width: 30%;
+    height: 400px;
+    background-image: url(code1.jpeg);
+    transition: .3s;
+    margin-left: 35%;
+    margin-top: -420px;
+    background-position: center; 
+}
+.zoom2{
+    width: 30%;
+    height: 400px;
+    background-image: url(code2.jpg);
+    transition: .3s;
+    margin-left: 68%;
+    margin-top: -400px;
+    background-position: center; 
+}
+
+.zoom:hover{
+    transform: scale(1.1);
+}
+.zoom1:hover{
+    transform: scale(1.1);
+}
+.zoom2:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 1000px){
+ 
+    .zoom{
+        width: 40%;
+        height: 400px;
+        background-image: url(code.jpeg);
+        transition: .3s;
+        margin: 20px;
+        margin-top: 15%;
+        background-position: center; 
+    }
+    .zoom1{
+        width: 40%;
+        height: 400px;
+        background-image: url(code1.jpeg);
+        transition: .3s;
+        margin-left: 50%;
+        margin-top: -420px;
+        background-position: center; 
+    }
+    .zoom2{
+        width: 40%;
+        height: 400px;
+        background-image: url(code2.jpg);
+        transition: .3s;
+        margin-left: 2%;
+        margin-top: 50px;
+        background-position: center; 
+    }
+}
+@media screen and (max-width: 600px){
+ 
+    .zoom{
+        width: 95%;
+        height: 400px;
+        background-image: url(code.jpeg);
+        transition: .3s;
+        margin-left: 2%;
+        margin-top: 15%;
+        background-position: center; 
+    }
+    .zoom1{
+        width: 95%;
+        height: 400px;
+        background-image: url(code1.jpeg);
+        transition: .3s;
+        margin-left: 2%;
+        margin-top: 0px;
+        background-position: center; 
+    }
+    .zoom2{
+        width: 95%;
+        height: 400px;
+        background-image: url(code2.jpg);
+        transition: .3s;
+        margin-left: 2%;
+        margin-top: 15px;
+        background-position: center; 
+    }
+    .zoom:hover{
+        transform: scale(1.05);
+    }
+    .zoom1:hover{
+        transform: scale(1.05);
+    }
+    .zoom2:hover{
+        transform: scale(1.05);
+    }
+}
