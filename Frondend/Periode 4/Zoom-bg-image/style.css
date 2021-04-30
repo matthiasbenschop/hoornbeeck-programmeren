@@ -6,6 +6,7 @@
     margin: 20px;
     margin-top: 15%;
     background-position: center; 
+    border-radius: 20px;
 }
 .zoom1{
     width: 30%;
@@ -15,6 +16,7 @@
     margin-left: 35%;
     margin-top: -420px;
     background-position: center; 
+    border-radius: 20px;
 }
 .zoom2{
     width: 30%;
@@ -24,6 +26,7 @@
     margin-left: 68%;
     margin-top: -400px;
     background-position: center; 
+    border-radius: 20px;
 }
 
 .zoom:hover{
@@ -46,6 +49,7 @@
         margin: 20px;
         margin-top: 15%;
         background-position: center; 
+        border-radius: 20px;
     }
     .zoom1{
         width: 40%;
@@ -54,7 +58,8 @@
         transition: .3s;
         margin-left: 50%;
         margin-top: -420px;
-        background-position: center; 
+        background-position: center;
+        border-radius: 20px;
     }
     .zoom2{
         width: 40%;
@@ -64,6 +69,7 @@
         margin-left: 2%;
         margin-top: 50px;
         background-position: center; 
+        border-radius: 20px;
     }
 }
 @media screen and (max-width: 600px){
@@ -76,6 +82,7 @@
         margin-left: 2%;
         margin-top: 15%;
         background-position: center; 
+        border-radius: 20px;
     }
     .zoom1{
         width: 95%;
@@ -85,6 +92,7 @@
         margin-left: 2%;
         margin-top: 0px;
         background-position: center; 
+        border-radius: 20px;
     }
     .zoom2{
         width: 95%;
@@ -94,6 +102,7 @@
         margin-left: 2%;
         margin-top: 15px;
         background-position: center; 
+        border-radius: 20px;
     }
     .zoom:hover{
         transform: scale(1.05);
