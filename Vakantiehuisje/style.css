@@ -1,106 +1,559 @@
-body {margin:0;font-family:Arial}
+* {
+  margin: 0;
+  padding: 0;
+}
 
-.topnav {
-    overflow: hidden;
-    background-color: #333;
+/* Menu */
+
+.container {
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+  background: #131313;
+  font-family:'Helvetica Neue', sans-serif;
+}
+
+.menu-color {
+font-size: 80px;
+color: #4b44b4;
+text-decoration: none;
+text-transform: uppercase;
+}
+
+.popover {
+ display: none;
+ box-shadow: 0px 6px 8px rgba(19, 19, 19, .7);
+}
+
+.popover:target {
+position: absolute;
+right: 0;
+top: 0;
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.popover .content {
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+width: 0;
+height: 0;
+color: #fff;
+background-color: #191919;
+animation: 1s grow ease forwards;
+text-align: center;
+z-index: 999;
+}
+
+.nav_list  {
+list-style-type: none;
+}
+
+.nav_list a {
+text-decoration: none;
+font-size: 50px;
+color: #fff;
+}
+
+.nav_list_item {
+height: 100%;
+overflow: hidden;
+}
+
+.nav_list li {
+padding: 15px 0;
+text-transform: uppercase;
+transform: translateY(200px);
+opacity: 0;
+animation: 2s slideUp ease forwards .5s;
+position: relative;
+}
+
+.nav_list li::before {
+content: '';
+position: absolute;
+height: 2px;
+width: 0px;
+left: 0;
+bottom: 10px;
+background: #4b44b4; 
+transition: all .5s ease;
+}
+
+.nav_list li:hover:before {
+    width: 100%;
+}
+
+.popover p {
+padding: 50px;
+opacity: 0;
+animation: 1s fadeIn ease forwards 1s;
+}
+
+.popover .close::after {
+right: 0;
+top: 0;
+width: 50px;
+height: 50px;
+position: absolute;
+display: flex;
+z-index: 1;
+font-size: 30px;
+align-items: center;
+justify-content: center;
+background-color: #4b44b4;
+color: #fff;
+content: "×";
+cursor: pointer;
+opacity: 0; 
+animation: 1s fadeIn ease forwards .5s;
+}
+
+@keyframes grow {
+100% {
+  height: 90%;
+  width: 90%;
+}
+}
+
+@keyframes fadeIn {
+100% {
+opacity: 1;
+}
+}
+
+@keyframes slideUp {
+100% {
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+
+/* title home */
+
+.title-home{
+  text-align: center;
+  margin: 30px;
+}
+
+/* search homepagina */
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #000000;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #000000;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #000000;
+  background: #000000;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 0px 0px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.wrap{
+  width: 30%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search {
+  width: 200%;
+  position: relative;
+  display: flex;
+  left: -50px;
+  top: 0px;
+}
+.search1 {
+  width: 200%;
+  position: relative;
+  display: flex;
+  left: -50px;
+  top: -3px;
+}
+.search2 {
+  width: 200%;
+  position: relative;
+  display: flex;
+  left: -50px;
+  top: -8px;
+}
+.omvangsearch{
+  background: rgb(207, 204, 204);
+  height: 300px;
+  margin-top: 0px;
+}
+
+.populair-home{
+  position: relative;
+  text-align: center;
+  text-decoration: underline;
+}
+.populair-home-under{
+  text-align: center;
+}
+
+@media only screen and (min-width: 1300px) {
+  .search {
+    width: 200%;
+    position: relative;
+    display: flex;
+    left: -200px;
+    top: 0px;
   }
-  
-  .topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+  .search1 {
+    width: 200%;
+    position: relative;
+    display: flex;
+    left: -200px;
+    top: -3px;
   }
-  
-  .active {
-    background-image: url('image/logo.png');
-    color: white;
-    width: 350px;
-    height: 50px;
+  .search2 {
+    width: 200%;
+    position: relative;
+    display: flex;
+    left: -200px;
+    top: -8px;
   }
-  
-  .topnav .icon {
-    display: none;
+}
+
+@media only screen and (min-width: 775px) {
+  .search {
+    width: 200%;
+    position: relative;
+    display: flex;
+    left: -150px;
+    top: 0px;
   }
-  
-  .dropdown {
-    float: left;
-    overflow: hidden;
+  .search1 {
+    width: 200%;
+    position: relative;
+    display: flex;
+    left: -150px;
+    top: -3px;
   }
-  
-  .dropdown .dropbtn {
-    font-size: 17px;    
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
+  .search2 {
+    width: 200%;
+    position: relative;
+    display: flex;
+    left: -150px;
+    top: -8px;
   }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+}
+
+
+/* slideshow */
+.mySlides {display: none;}
+img {vertical-align: middle; height: 300px; width: 300px; max-height:300px; object-fit: cover;}
+
+.active_slide{
+  display: block;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* pijltjes */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* next button right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* title text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* nummers */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* animatie */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.rating-title{
+  position: relative;
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* algemene reviews homepage */
+
+/* .circle-rating{
+  position: relative;
+  left: 23%;
+  width: 200px;
+  height: 200px;
+  border: 10px solid green;
+  border-radius: 50%;
+  border-bottom-color: whitesmoke;
+  transform: rotate(140deg);
+}
+.procenten{
+  text-align: center;
+  position: relative;
+  top: -130px;
+} */
+
+
+
+
+
+
+
+/* reviews homepage */
+
+
+label {
+  cursor: pointer;
+}
+svg {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.15rem;
+}
+input[name="star"] {
+  display: inline-block;
+  width: 0;
+  opacity: 0;
+  margin-left: -2px;
+}
+.star-source {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.star {
+  color: transparent;
+  transition: color 0.2s ease-in-out;
+}
+.star-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+label:hover ~ label .star,
+svg.star:hover,
+input[name="star"]:focus ~ label .star,
+input[name="star"]:checked ~ label .star {
+  color: #00109c;
+}
+input[name="star"]:checked + label .star {
+  animation: starred 0.5s;
+}
+input[name="star"]:checked + label {
+  animation: scaleup 1s;
+}
+
+@keyframes scaleup {
+  from {
+    transform: scale(1.2);
   }
-  
-  .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+  to {
+    transform: scale(1);
   }
-  
-  .topnav a:hover, .dropdown:hover .dropbtn {
-    background-color: #555;
-    color: white;
+}
+
+@keyframes starred {
+  from {
+    color: #00109c;
   }
-  
-  .dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
+  to {
+    color: #3e2beb;
   }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  @media screen and (max-width: 800px) {
-    .topnav a:not(:first-child), .dropdown .dropbtn {
-      display: none;
-    }
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
-  }
-  
-  @media screen and (max-width: 800px) {
-    .topnav.responsive {position: relative;}
-    .topnav.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    .topnav.responsive .dropdown {float: none;}
-    .topnav.responsive .dropdown-content {position: relative;}
-    .topnav.responsive .dropdown .dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
+}
+
+/* aantal huisjes */
+.aantal-huisjes{
+  position: relative;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 40px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.gallery div{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  border: 2px solid rgb(95, 88, 88);
+  text-align: center;
+}
+.gallery img{
+  height: 300px;
+  width: 100%;
+}
+
+/* rating */
+.checked {
+  color: orange;
+}
+
+
+
+
+
+/* login register */
+.box{
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #191919;
+  text-align: center;
+  border-radius: 30px;
+}
+.box h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.box input[type = "text"],.box input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 30px;
+  transition: 0.25s;
+}
+.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+  width: 220px;
+  border-color: #2ecc71;
+}
+.box input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 30px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.box input[type = "submit"]:hover{
+  background: #2ecc71;
+}
+.login-register-color{
+  color: #fff;
+}
+.radio{
+  color: #fff;
+}
+
+
+
+
+
+
+/* footer */
+
