@@ -267,7 +267,7 @@ opacity: 1;
 
 /* slideshow */
 .mySlides {display: none;}
-img {vertical-align: middle; height: 300px; width: 300px; max-height:300px; object-fit: cover;}
+.mySlides img {vertical-align: middle; height: 300px; width: 300px; max-height:300px; object-fit: cover;}
 
 .active_slide{
   display: block;
@@ -368,92 +368,6 @@ img {vertical-align: middle; height: 300px; width: 300px; max-height:300px; obje
   text-decoration: underline;
 }
 
-/* algemene reviews homepage */
-
-/* .circle-rating{
-  position: relative;
-  left: 23%;
-  width: 200px;
-  height: 200px;
-  border: 10px solid green;
-  border-radius: 50%;
-  border-bottom-color: whitesmoke;
-  transform: rotate(140deg);
-}
-.procenten{
-  text-align: center;
-  position: relative;
-  top: -130px;
-} */
-
-
-
-
-
-
-
-/* reviews homepage */
-
-
-label {
-  cursor: pointer;
-}
-svg {
-  width: 3rem;
-  height: 3rem;
-  padding: 0.15rem;
-}
-input[name="star"] {
-  display: inline-block;
-  width: 0;
-  opacity: 0;
-  margin-left: -2px;
-}
-.star-source {
-  width: 0;
-  height: 0;
-  visibility: hidden;
-}
-.star {
-  color: transparent;
-  transition: color 0.2s ease-in-out;
-}
-.star-container {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-}
-label:hover ~ label .star,
-svg.star:hover,
-input[name="star"]:focus ~ label .star,
-input[name="star"]:checked ~ label .star {
-  color: #00109c;
-}
-input[name="star"]:checked + label .star {
-  animation: starred 0.5s;
-}
-input[name="star"]:checked + label {
-  animation: scaleup 1s;
-}
-
-@keyframes scaleup {
-  from {
-    transform: scale(1.2);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-@keyframes starred {
-  from {
-    color: #00109c;
-  }
-  to {
-    color: #3e2beb;
-  }
-}
-
 /* aantal huisjes */
 .aantal-huisjes{
   position: relative;
@@ -485,10 +399,6 @@ input[name="star"]:checked + label {
 .checked {
   color: orange;
 }
-
-
-
-
 
 /* login register */
 .box{
@@ -550,9 +460,243 @@ input[name="star"]:checked + label {
   color: #fff;
 }
 
+/* detailpagina */
+.grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-gap: 15px;
+  position: relative;
+  left: 50%;
+  top: 500px;
+  width: 60%;
+  transform: translateX(-50%);
+  }
+  @media screen and (min-width: 1450px) {
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); 
+    }
+  }
+.grid img {
+  height: 300px;
+  width: 100%;
+  transition: .3s;
+  border-radius: 10px;
+}
+.grid img:hover {
+  transform: scale(1.1);
+}
+.titleDetail{
+  position: relative;
+  top: -3700px;
+  text-align: center;
+  font-size: 200%;
+}
+.typeDetail{
+  font-size: 150%;
+  position: relative;
+  top: -3700px;
+  text-align: center;
+}
+.capacityDetail{
+  font-size: 150%;
+  position: relative;
+  top: -3700px;
+  text-align: center;
+}
+.priceDetail{
+  font-size: 150%;
+  position: relative;
+  top: -3700px;
+  text-align: center;
+}
+.Countrydetail{
+  font-size: 150%;
+  position: relative;
+  top: -3700px;
+  text-align: center;
+}
+.cityDetail{
+  font-size: 150%;
+  position: relative;
+  top: -3700px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+.descriptionDetail{
+  font-size: 120%;
+  margin: 20px;
+  position: relative;
+  top: -3700px;
+  text-align: center;
+}
+.custom_fieldsDetail{
+  font-size: 120%;
+  margin: 20px;
+  position: relative;
+  top: -3700px;
+  text-align: center;
+}
 
-
-
+@media only screen and (min-width: 924px) {
+  .titleDetail{
+    position: relative;
+    top: -1800px;
+    text-align: center;
+    font-size: 200%;
+  }
+  .typeDetail{
+    font-size: 150%;
+    position: relative;
+    top: -1800px;
+    text-align: center;
+  }
+  .capacityDetail{
+    font-size: 150%;
+    position: relative;
+    top: -1800px;
+    text-align: center;
+  }
+  .priceDetail{
+    font-size: 150%;
+    position: relative;
+    top: -1800px;
+    text-align: center;
+  }
+  .Countrydetail{
+    font-size: 150%;
+    position: relative;
+    top: -1800px;
+    text-align: center;
+  }
+  .cityDetail{
+    font-size: 150%;
+    position: relative;
+    top: -1800px;
+    text-align: center;
+    border-bottom: 1px solid black;
+  }
+  .descriptionDetail{
+    font-size: 120%;
+    margin: 20px;
+    position: relative;
+    top: -1800px;
+    text-align: center;
+  }
+  .custom_fieldsDetail{
+    font-size: 120%;
+    margin: 20px;
+    position: relative;
+    top: -1800px;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .titleDetail{
+    position: relative;
+    top: -1170px;
+    text-align: center;
+    font-size: 200%;
+  }
+  .typeDetail{
+    font-size: 150%;
+    position: relative;
+    top: -1170px;
+    text-align: center;
+  }
+  .capacityDetail{
+    font-size: 150%;
+    position: relative;
+    top: -1170px;
+    text-align: center;
+  }
+  .priceDetail{
+    font-size: 150%;
+    position: relative;
+    top: -1170px;
+    text-align: center;
+  }
+  .Countrydetail{
+    font-size: 150%;
+    position: relative;
+    top: -1170px;
+    text-align: center;
+  }
+  .cityDetail{
+    font-size: 150%;
+    position: relative;
+    top: -1170px;
+    text-align: center;
+    border-bottom: 1px solid black;
+  }
+  .descriptionDetail{
+    font-size: 120%;
+    margin: 20px;
+    position: relative;
+    top: -1170px;
+    text-align: center;
+  }
+  .custom_fieldsDetail{
+    font-size: 120%;
+    margin: 20px;
+    position: relative;
+    top: -1170px;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 1450px) {
+  .titleDetail{
+    position: relative;
+    top: -900px;
+    text-align: center;
+    font-size: 200%;
+  }
+  .typeDetail{
+    font-size: 150%;
+    position: relative;
+    top: -900px;
+    text-align: center;
+  }
+  .capacityDetail{
+    font-size: 150%;
+    position: relative;
+    top: -900px;
+    text-align: center;
+  }
+  .priceDetail{
+    font-size: 150%;
+    position: relative;
+    top: -900px;
+    text-align: center;
+  }
+  .Countrydetail{
+    font-size: 150%;
+    position: relative;
+    top: -900px;
+    text-align: center;
+  }
+  .cityDetail{
+    font-size: 150%;
+    position: relative;
+    top: -900px;
+    text-align: center;
+    border-bottom: 1px solid black;
+  }
+  .descriptionDetail{
+    font-size: 120%;
+    margin: 20px;
+    position: relative;
+    top: -900px;
+    text-align: center;
+  }
+  .custom_fieldsDetail{
+    font-size: 120%;
+    margin: 20px;
+    position: relative;
+    top: -900px;
+    text-align: center;
+  }
+}
 
 
 /* footer */
