@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include 'includes/header.php'; ?>
 
 <!-- Search -->
 
@@ -39,11 +39,11 @@
 
 <div class="slideshow-container">
   <?php
-  $sql = "SELECT * FROM houses limit 6";
+  $sql = "select houses.*, (select path from images where house_id = houses.id limit 1) as image from houses limit 6";
   $results = mysqli_query($conn, $sql);
   while ($data = mysqli_fetch_assoc($results)) {
     echo '<div class="mySlides fade">
-    <div class="numbertext">' . $data['id'] . '/ 6</div>
+    <div class="numbertext">' . $data['id'] . '</div>
     <img src="image/' . $data['image'] . '" style="width:100%; object-fit: cover;">
     <a href="detail.php?id=' . $data['id'] . '">
       <div class="text">' . $data['title'] . '</div>
@@ -71,20 +71,14 @@
 
 <div class="gallery">
   <?php
-  $sql = "SELECT * FROM houses";
+  $sql = "select houses.*, (select path from images where house_id = houses.id limit 1) as image from houses";
   $results = mysqli_query($conn, $sql);
   while ($data = mysqli_fetch_assoc($results)) {
     $sql1 = "SELECT country FROM houses WHERE country = '$data[country]'";
     $result1 = mysqli_query($conn, $sql1);
     $totalhouses = mysqli_num_rows($result1);
     echo ' <div> <a href="detail.php?id=' . $data['id'] . '"><img src="image/' . $data['image'] . '"></a>
-            <p>' . $data['country'] . '<br>' . $totalhouses . ' bestemmingen</p>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            </div>';
+            <p>' . $data['country'] . '<br>' . $totalhouses . ' bestemmingen</p></div>';
   }
 
 
@@ -97,4 +91,4 @@
 
 
 
-  <?php include 'footer.php'; ?>
+  <?php include 'includes/footer.php'; ?>

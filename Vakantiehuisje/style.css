@@ -467,7 +467,7 @@ opacity: 1;
   grid-gap: 15px;
   position: relative;
   left: 50%;
-  top: 500px;
+  top: 50px;
   width: 60%;
   transform: translateX(-50%);
   }
@@ -476,6 +476,18 @@ opacity: 1;
       display: grid;
       grid-template-columns: repeat(4, 1fr); 
     }
+  }
+  @media  screen and (min-width: 600px) {
+    .grid { 
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      grid-gap: 15px;
+      position: relative;
+      left: 50%;
+      top: 50px;
+      width: 60%;
+      transform: translateX(-50%);
+      }
   }
 .grid img {
   height: 300px;
@@ -486,218 +498,152 @@ opacity: 1;
 .grid img:hover {
   transform: scale(1.1);
 }
-.titleDetail{
+.wrapper{
+  font-size: 20px;
   position: relative;
-  top: -3700px;
+  top: 50px;
   text-align: center;
-  font-size: 200%;
 }
-.typeDetail{
+.buttonReserveren{
+  position: relative;
+  top: 100px;
+  left: 28%;
+  width: 200px;
   font-size: 150%;
+  border: 3px solid rgb(36, 1, 94);
+  background-color: #fff;
+  color: black;
+  border-radius: 20px;
+}
+.buttonReserveren:hover{
+  background-color: black;
+  color: #fff;
+  transition: 0.5s;
+}
+@media screen and (min-width: 1500px){
+  .buttonReserveren{
+    position: relative;
+    top: 180px;
+    left: 70%;
+    width: 200px;
+    font-size: 150%;
+    border: 3px solid rgb(36, 1, 94);
+    background-color: #fff;
+    color: black;
+    border-radius: 20px;
+  }
+  .titleReserveren{
+    position: relative;
+    top: 200px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1000px){
+  .buttonReserveren{
+    position: relative;
+    top: 150px;
+    left: 40%;
+    width: 200px;
+    font-size: 150%;
+    border: 3px solid rgb(36, 1, 94);
+    background-color: #fff;
+    color: black;
+    border-radius: 20px;
+  }
+  .titleReserveren{
+    position: relative;
+    top: 200px;
+    text-align: center;
+  }
+}
+.titleReserveren{
   position: relative;
-  top: -3700px;
+  top: 90px;
   text-align: center;
 }
-.capacityDetail{
-  font-size: 150%;
+.buttonReviews{
   position: relative;
-  top: -3700px;
+  top: 220px;
+  left: 25%;
+  width: 220px;
+  height: 40px;
+  font-size: 100%;
+  border: 3px solid rgb(36, 1, 94);
+  background-color: #fff;
+  color: black;
+  border-radius: 20px;
   text-align: center;
 }
-.priceDetail{
-  font-size: 150%;
+.buttonReviews:hover{
+  background-color: black;
+  color: #fff;
+  transition: 0.5s;
+}
+.reviewForm{
   position: relative;
-  top: -3700px;
+  left: 30%;
+  top: 200px;
+}
+.reviewTitle{
+  position: relative;
+  left: -110px;
+  top: 20px;
   text-align: center;
 }
-.Countrydetail{
-  font-size: 150%;
-  position: relative;
-  top: -3700px;
-  text-align: center;
+/* bookingsformulier */
+div.elem-group {
+  margin: 20px 0;
 }
-.cityDetail{
-  font-size: 150%;
-  position: relative;
-  top: -3700px;
-  text-align: center;
-  border-bottom: 1px solid black;
+div.elem-group.inlined {
+  width: 49%;
+  display: inline-block;
+  float: left;
+  margin-left: 1%;
 }
-.descriptionDetail{
-  font-size: 120%;
-  margin: 20px;
-  position: relative;
-  top: -3700px;
-  text-align: center;
+label {
+  display: block;
+  font-family: 'Nanum Gothic';
+  padding-bottom: 10px;
+  font-size: 1.25em;
 }
-.custom_fieldsDetail{
-  font-size: 120%;
-  margin: 20px;
-  position: relative;
-  top: -3700px;
-  text-align: center;
+.elem-group input, select, textarea {
+  border-radius: 2px;
+  border: 2px solid #777;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  font-family: 'Nanum Gothic';
+  width: 100%;
+  padding: 10px;
+}
+textarea {
+  height: 250px;
+}
+button {
+  height: 50px;
+  width: 150px;
+  background: rgb(15, 1, 77);
+  border: none;
+  color: white;
+  font-size: 1.25em;
+  font-family: 'Nanum Gothic';
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: black;
+  transition: 0.5s;
 }
 
-@media only screen and (min-width: 924px) {
-  .titleDetail{
-    position: relative;
-    top: -1800px;
-    text-align: center;
-    font-size: 200%;
-  }
-  .typeDetail{
-    font-size: 150%;
-    position: relative;
-    top: -1800px;
-    text-align: center;
-  }
-  .capacityDetail{
-    font-size: 150%;
-    position: relative;
-    top: -1800px;
-    text-align: center;
-  }
-  .priceDetail{
-    font-size: 150%;
-    position: relative;
-    top: -1800px;
-    text-align: center;
-  }
-  .Countrydetail{
-    font-size: 150%;
-    position: relative;
-    top: -1800px;
-    text-align: center;
-  }
-  .cityDetail{
-    font-size: 150%;
-    position: relative;
-    top: -1800px;
-    text-align: center;
-    border-bottom: 1px solid black;
-  }
-  .descriptionDetail{
-    font-size: 120%;
-    margin: 20px;
-    position: relative;
-    top: -1800px;
-    text-align: center;
-  }
-  .custom_fieldsDetail{
-    font-size: 120%;
-    margin: 20px;
-    position: relative;
-    top: -1800px;
-    text-align: center;
-  }
+/* toevoegen seller */
+.chooseFile{
+  height: 30px;
+  width: 120px;
+  background: rgb(15, 1, 77);
+  border: none;
+  color: white;
+  font-size: 1.25em;
+  font-family: 'Nanum Gothic';
+  border-radius: 20px;
+  cursor: pointer;
 }
-@media only screen and (min-width: 1400px) {
-  .titleDetail{
-    position: relative;
-    top: -1170px;
-    text-align: center;
-    font-size: 200%;
-  }
-  .typeDetail{
-    font-size: 150%;
-    position: relative;
-    top: -1170px;
-    text-align: center;
-  }
-  .capacityDetail{
-    font-size: 150%;
-    position: relative;
-    top: -1170px;
-    text-align: center;
-  }
-  .priceDetail{
-    font-size: 150%;
-    position: relative;
-    top: -1170px;
-    text-align: center;
-  }
-  .Countrydetail{
-    font-size: 150%;
-    position: relative;
-    top: -1170px;
-    text-align: center;
-  }
-  .cityDetail{
-    font-size: 150%;
-    position: relative;
-    top: -1170px;
-    text-align: center;
-    border-bottom: 1px solid black;
-  }
-  .descriptionDetail{
-    font-size: 120%;
-    margin: 20px;
-    position: relative;
-    top: -1170px;
-    text-align: center;
-  }
-  .custom_fieldsDetail{
-    font-size: 120%;
-    margin: 20px;
-    position: relative;
-    top: -1170px;
-    text-align: center;
-  }
-}
-@media only screen and (min-width: 1450px) {
-  .titleDetail{
-    position: relative;
-    top: -900px;
-    text-align: center;
-    font-size: 200%;
-  }
-  .typeDetail{
-    font-size: 150%;
-    position: relative;
-    top: -900px;
-    text-align: center;
-  }
-  .capacityDetail{
-    font-size: 150%;
-    position: relative;
-    top: -900px;
-    text-align: center;
-  }
-  .priceDetail{
-    font-size: 150%;
-    position: relative;
-    top: -900px;
-    text-align: center;
-  }
-  .Countrydetail{
-    font-size: 150%;
-    position: relative;
-    top: -900px;
-    text-align: center;
-  }
-  .cityDetail{
-    font-size: 150%;
-    position: relative;
-    top: -900px;
-    text-align: center;
-    border-bottom: 1px solid black;
-  }
-  .descriptionDetail{
-    font-size: 120%;
-    margin: 20px;
-    position: relative;
-    top: -900px;
-    text-align: center;
-  }
-  .custom_fieldsDetail{
-    font-size: 120%;
-    margin: 20px;
-    position: relative;
-    top: -900px;
-    text-align: center;
-  }
-}
-
-
-/* footer */
 

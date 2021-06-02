@@ -31,7 +31,7 @@
 
   if ($_POST) {
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = hash('sha256', $_POST['password']);
     $sql = "SELECT*FROM users WHERE username='$username' AND password='$password'";
     $results = mysqli_query($conn, $sql);
     $data = mysqli_fetch_assoc($results);
