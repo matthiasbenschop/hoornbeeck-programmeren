@@ -561,10 +561,11 @@ opacity: 1;
   top: 90px;
   text-align: center;
 }
+/* reviewsadd */
 .buttonReviews{
   position: relative;
-  top: 220px;
-  left: 25%;
+  top: 0px;
+  left: -20px;
   width: 220px;
   height: 40px;
   font-size: 100%;
@@ -587,7 +588,7 @@ opacity: 1;
 .reviewTitle{
   position: relative;
   left: -110px;
-  top: 20px;
+  top: -10px;
   text-align: center;
 }
 /* bookingsformulier */
@@ -597,8 +598,10 @@ div.elem-group {
 div.elem-group.inlined {
   width: 49%;
   display: inline-block;
-  float: left;
   margin-left: 1%;
+}
+div.elem-group.inlined {
+  float: left;
 }
 label {
   display: block;
@@ -647,3 +650,16 @@ button:hover {
   cursor: pointer;
 }
 
+
+/* bookings */
+.titleBookings{
+  text-align: center;
+}
+
+#preloader{
+  background: #fff url('image/preloader.gif') no-repeat center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+} 

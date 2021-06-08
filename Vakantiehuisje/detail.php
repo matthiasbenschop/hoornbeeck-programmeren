@@ -1,9 +1,12 @@
 <?php include 'includes/header.php'; ?>
 
 <?php
-
+error_reporting(E_ERROR | E_PARSE);
 $id = $_GET['id'];
-
+if (isset($_POST['submit'])) {
+    $sql = "INSERT INTO reviews (review, title, rating, house_id, user_id) VALUES ('$_POST[review]', '$_POST[title]', '$_POST[rating]', '$id', '$_SESSION[user][id]')";
+    mysqli_query($conn, $sql);
+}
 $sql1 = "SELECT * FROM houses WHERE id='$id'";
 
 
@@ -77,15 +80,17 @@ echo '</div>';
 <h2 class="titleReserveren">Ziet het er leuk uit? Klik dan nu op de knop hieronder!</h2>
 <a href="boeken.php"><button class="buttonReserveren">Boeken</button></a>
 <form method="POST" class="reviewForm">
-    <h3 class="reviewTitle">Laat hier je mening achter!</h3>
-    <label for="title"></label><br>
-    <input type="text" name="title" placeholder="Titel">
-    <label for="review"></label><br>
-    <input type="text" name="review" placeholder="Review">
-    <label for="rating"></label><br>
-    <input type="text" name="rating" placeholder="rating 1/5">
+    <h3 class="reviewTitle">Laat hier je mening over dit huisje achter!</h3>
+    <input type="text" name="title" placeholder="Titel"><br><br>
+    <input type="text" name="review" placeholder="Review"><br><br>
+    <input type="text" name="rating" placeholder="rating 1/5"><br><br>
+    <input type="submit" value="Plaatsen" class="buttonReviews" name="submit"></input>
 </form>
-<button class="buttonReviews">Review Toevoegen</button>
 
+<?php
+
+
+
+?>
 
 <?php include 'includes/footer.php'; ?>

@@ -51,3 +51,10 @@
     </div>
     <button type="submit">Boeken</button>
 </form>
+
+<?php
+if (isset($_GET['bookings'])) {
+    $user_id = $_SESSION['ingelogd']['id'];
+    $sql = "INSERT INTO user_info () values ()";
+}
+?>
