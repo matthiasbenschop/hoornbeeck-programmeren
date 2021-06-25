@@ -7,7 +7,9 @@ if (isset($_POST['submit'])) {
     $sql = "INSERT INTO reviews (review, title, rating, house_id, user_id) VALUES ('$_POST[review]', '$_POST[title]', '$_POST[rating]', '$id', '$_SESSION[user][id]')";
     mysqli_query($conn, $sql);
 }
-$sql1 = "SELECT * FROM houses WHERE id='$id'";
+$sql1 = "SELECT houses. * , houses.title house_title FROM houses
+LEFT JOIN reviews on reviews.house_id = houses.id
+WHERE houses.id='$id'";
 
 
 $result = mysqli_query($conn, $sql1);
@@ -78,12 +80,12 @@ echo '</div>';
 ?><br>
 
 <h2 class="titleReserveren">Ziet het er leuk uit? Klik dan nu op de knop hieronder!</h2>
-<a href="boeken.php"><button class="buttonReserveren">Boeken</button></a>
+<a href="boeken.php?id=<?php echo $id ?>"><button class="buttonReserveren">Boeken</button></a>
 <form method="POST" class="reviewForm">
     <h3 class="reviewTitle">Laat hier je mening over dit huisje achter!</h3>
-    <input type="text" name="title" placeholder="Titel"><br><br>
-    <input type="text" name="review" placeholder="Review"><br><br>
-    <input type="text" name="rating" placeholder="rating 1/5"><br><br>
+    <input class="inputRatingAdd" type="text" name="title" placeholder="Titel"><br><br>
+    <input class="inputRatingAdd" type="text" name="review" placeholder="Review"><br><br>
+    <input class="inputRatingAdd" type="text" name="rating" placeholder="rating 1/5"><br><br>
     <input type="submit" value="Plaatsen" class="buttonReviews" name="submit"></input>
 </form>
 

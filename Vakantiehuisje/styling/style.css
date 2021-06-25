@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+body{
+  font-family: 'Crimson Text', serif;
+}
 
 /* Menu */
 
@@ -362,6 +365,7 @@ opacity: 1;
   .prev, .next,.text {font-size: 11px}
 }
 
+
 .rating-title{
   position: relative;
   text-align: center;
@@ -377,7 +381,7 @@ opacity: 1;
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 40px;
+  grid-gap: 80px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -386,14 +390,17 @@ opacity: 1;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 10px;
-  border: 2px solid rgb(95, 88, 88);
   text-align: center;
 }
 .gallery img{
   height: 300px;
-  width: 100%;
+  width: 95%;
+  transition: 0.2s linear;
 }
+.gallery img:hover{
+  box-shadow: 5px 5px 8px #4b44b4;
+}
+
 
 /* rating */
 .checked {
@@ -591,6 +598,16 @@ opacity: 1;
   top: -10px;
   text-align: center;
 }
+.inputRatingAdd{
+  width: 50%;
+  padding: 8px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 /* bookingsformulier */
 div.elem-group {
   margin: 20px 0;
@@ -636,7 +653,23 @@ button:hover {
   background-color: black;
   transition: 0.5s;
 }
-
+.buttonBoeken{
+  height: 50px;
+  width: 150px;
+  background: rgb(15, 1, 77);
+  border: none;
+  color: white;
+  font-size: 1.25em;
+  font-family: 'Nanum Gothic';
+  border-radius: 6px;
+  cursor: pointer;
+}
+.buttonBoeken:hover{
+  background-color: #fff;
+  color: black;
+  transition: 0.5s;
+  border: 1px solid #000;
+}
 /* toevoegen seller */
 .chooseFile{
   height: 30px;
@@ -655,6 +688,14 @@ button:hover {
 .titleBookings{
   text-align: center;
 }
+.bookings{
+  text-align: center;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.bookings:hover{
+  color: #4b44b4;
+}
 
 #preloader{
   background: #fff url('image/preloader.gif') no-repeat center;
@@ -663,3 +704,34 @@ button:hover {
   position: fixed;
   z-index: 100;
 } 
+
+/* resultpage */
+
+.resultImage{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 40px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  border-radius: 20px;
+  transition: 0.5s ease;
+}
+.resultImage:hover{
+    width: 310px;
+    border: 5px solid grey;
+  }
+.descriptionResult{
+  text-align: center;
+  font-size: 18px;
+}
+.titleResult{
+  text-align: center;
+  font-size: 20px;
+}
+.detailResult{
+  text-align: center;
+  font-size: 20px;
+}
+

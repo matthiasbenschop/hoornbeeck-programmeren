@@ -80,4 +80,4 @@ if (isset($_POST['toevoegen'])) {
     <input type="text" name="custom_fields" placeholder="Extra" required>
     <input type="submit" name="toevoegen" value="Toevoegen">
 </form>
-<script src="images.js?<?= time() ?>"></script>
+<script src="styling/images.js?<?= time() ?>"></script>

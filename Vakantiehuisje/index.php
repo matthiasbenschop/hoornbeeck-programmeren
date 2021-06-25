@@ -4,7 +4,7 @@
 
 <h3 class="title-home">Vind deals voor hotels, huizen en nog veel meer ...</h3>
 
-<form action="" method="POST">
+<form action="resultaten.php" method="POST">
   <div class="omvangsearch">
     <div class="wrap">
       <div class="search">
@@ -23,13 +23,14 @@
     </div>
     <div class="wrap">
       <div class="search2">
-        <input type="text" class="searchTerm" placeholder="Aantal personen">
+        <input type="number" name="persons" class="searchTerm" placeholder="Aantal personen">
         <button type="submit" class="searchButton">
         </button>
 </form>
 </div>
 </div>
 </div><br>
+
 
 <h3 class="populair-home">Populaire huisjes</h3>
 <p class="populair-home-under">klik voor meer informatie</p>
@@ -42,13 +43,19 @@
   $sql = "select houses.*, (select path from images where house_id = houses.id limit 1) as image from houses limit 6";
   $results = mysqli_query($conn, $sql);
   while ($data = mysqli_fetch_assoc($results)) {
-    echo '<div class="mySlides fade">
-    <div class="numbertext">' . $data['id'] . '</div>
-    <img src="image/' . $data['image'] . '" style="width:100%; object-fit: cover;">
-    <a href="detail.php?id=' . $data['id'] . '">
-      <div class="text">' . $data['title'] . '</div>
-    </a>
-  </div>';
+    $i = 1;
+    echo '<div class="mySlides fade active';
+    // if ($i == 1) {
+    //   echo 'active';
+    // }
+    echo '">
+      <div class="numbertext">' . $data['id'] . '</div>
+      <img src="image/' . $data['image'] . '" style="width:100%; object-fit: cover;">
+      <a href="detail.php?id=' . $data['id'] . '">
+        <div class="text">' . $data['title'] . '</div>
+      </a>
+    </div>';
+    $i++;
   }
   ?>
 
@@ -85,9 +92,6 @@
   ?>
 
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/-ObdvMkCKws" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/-ObdvMkCKws" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/-ObdvMkCKws" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <br><br>
 
 
